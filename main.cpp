@@ -22,15 +22,24 @@ int main()
                 {
                         cout << "What is the item?" << endl;
                         cin >> newItem;
-                        list[numItems] = newItem;
-                        numItems++;
-                }
-                if (numItems > 4)
-                {
-                        cout << "You'll need a bigger list!" << endl;
-                        break;
+                        if (numItems > 4)
+                        {
+                          cout << "You'll need a bigger list!" << endl;
+                        }
+                        else
+                        {
+                          list[numItems] = newItem;
+                          numItems++;
+                        }
                 }
         } while (input != 'Q'  && input != 'q');
+
+        cout << "\n==ITEMS TO BUY==";
+        cout << "\n1 " << list[0];
+        cout << "\n2 " << list[1];
+        cout << "\n3 " << list[2];
+        cout << "\n4 " << list[3];
+        cout << "\n5 " << list[4] << endl;
 
         return 0;
 }
