@@ -33,8 +33,7 @@ int main()
                         }
                 }
         } while (input != 'Q'  && input != 'q');
-
-        cout << "\n==ITEMS TO BUY==";
+        cout << "==ITEMS TO BUY==";
         cout << "\n1 " << list[0];
         cout << "\n2 " << list[1];
         cout << "\n3 " << list[2];
