@@ -1,11 +1,12 @@
 //Brandan McGee
 #include<iostream>
+#include<vector>
 #include<string>
 using namespace std;
 
 int main()
 {
-        string list[5]; //array of 5 strings
+        vector<string> list; // vector dataType
         int numItems = 0;
         char input;
         string newItem;
@@ -22,23 +23,15 @@ int main()
                 {
                         cout << "What is the item?" << endl;
                         cin >> newItem;
-                        if (numItems > 4)
-                        {
-                          cout << "You'll need a bigger list!" << endl;
-                        }
-                        else
-                        {
-                          list[numItems] = newItem;
-                          numItems++;
-                        }
+                        list.push_back(newItem);
                 }
-        } while (input != 'Q'  && input != 'q');
-        cout << "==ITEMS TO BUY==";
-        cout << "\n1 " << list[0];
-        cout << "\n2 " << list[1];
-        cout << "\n3 " << list[2];
-        cout << "\n4 " << list[3];
-        cout << "\n5 " << list[4] << endl;
 
+        } while (input != 'Q'  && input != 'q');
+        cout << "==ITEMS TO BUY==" << endl ;
+        for ( int i = 0; i < list.size(); i++)
+        {
+            cout << i+1 << ". " << list[i] << endl;
+            
+        }
         return 0;
 }
