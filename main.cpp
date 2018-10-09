@@ -29,6 +29,7 @@ int main()
         } while (input != 'Q'  && input != 'q');
         if (list.size() > 0)
         {
+            cout << "==ITEMS TO BUY==" << endl;
             for ( int i = 0; i < list.size(); i++)
             {
                 cout << i+1 << " " << list[i] << endl;
