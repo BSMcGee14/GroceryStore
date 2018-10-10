@@ -31,7 +31,7 @@ int main()
                         cin >> newItem;
                         list.push_back(newItem);
                 }
-                if (input == 'D' || input == 'd')
+                if (list.size() > 0 && (input == 'D' || input == 'd'))
                 {
                     newItem = list.back();
                     list.pop_back();
